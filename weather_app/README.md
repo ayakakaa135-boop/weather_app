@@ -1,31 +1,19 @@
+# Sweden Weather App (Dark GUI) — Updated
 
-# Sweden Weather App (Dark GUI)
-
-This is a dark-mode GUI weather application focused on Sweden. It uses OpenWeatherMap API to fetch live weather for Swedish cities.
+A dark-mode weather application for Swedish cities using **CustomTkinter** and **OpenWeatherMap API**, updated with best practices.
 
 ## Contents
-- `weather_app.py` — Main GUI application (CustomTkinter)
-- `generate_cities.py` — Use this to download a complete list of Swedish populated places from GeoNames and generate `sweden_cities.json`
-- `sweden_cities.json` — Starter list of common Swedish cities
-- `requirements.txt` — Required packages
-
-## How to use
-1. Install dependencies:
-```
-pip install -r requirements.txt
-```
-2. (Optional) Generate the full city list (recommended for full coverage):
-```
-python generate_cities.py
-```
-This will download data from GeoNames and create `sweden_cities.json` with many Swedish place names.
-
-3. Run the app:
-```
-python weather_app.py
-```
-
-The app saves search history to `search_history.json` and you can view it using the "History" button in the app.
+- `weather_app.py` — Main app with dark interface, search history, CTkComboBox, and API key protection.  
+- `generate_cities.py` — Downloads all Swedish cities from GeoNames and generates `sweden_cities.json`.  
+- `sweden_cities.json` — Starter list of Swedish cities.  
+- `requirements.txt` — Required packages (`customtkinter`, `requests`, `python-dotenv`).  
+- `.gitignore` — Excludes `.env` and `search_history.json`.  
+- `.env` — Stores your API key locally (do not push to GitHub).
 
 ---
-Note: The bundled starter `sweden_cities.json` contains common cities so you can run the app immediately.
+
+## Installation
+1. Extract the files to any folder on your computer.  
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
